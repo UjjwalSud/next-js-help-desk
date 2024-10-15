@@ -2,9 +2,7 @@ import "./globals.css";
 import { Inter, Rubik } from "next/font/google";
 import type { Metadata } from "next";
 
-// components
-import NavBar from "./components/Navbar";
-
+export const dynamic = 'force-dynamic'
 const inter = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,8 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <NavBar />
+      <body className={inter.className}> 
         {children}
       </body>
     </html>
